@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>paramter-binding</artifactId>
+    <artifactId>parameter-binding</artifactId>
 
 
 </project>
