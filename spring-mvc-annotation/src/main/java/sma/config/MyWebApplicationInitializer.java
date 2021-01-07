@@ -1,12 +1,10 @@
 package sma.config;
 
+import javax.servlet.ServletContext;
+import javax.servlet.ServletRegistration;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
-import sma.controller.HelloWorldController;
-
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRegistration;
 
 /**
  * @Author ISJINHAO
@@ -27,8 +25,6 @@ public class MyWebApplicationInitializer implements WebApplicationInitializer {
         ServletRegistration.Dynamic registration = servletContext.addServlet("app", servlet);
         registration.setLoadOnStartup(1);
         registration.addMapping("/app1/*");
-
-
 
     }
 
