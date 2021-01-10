@@ -14,7 +14,7 @@
         <module>i18n</module>
         <module>spring-mvc-common</module>
         <module>spring-mvc-annotation</module>
-        <module>servlet-xml</module>
+        <module>spring-mvc-embed-tomcat</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -24,6 +24,7 @@
         <lombok-version>1.18.16</lombok-version>
         <servlet-version>4.0.1</servlet-version>
         <jackson-version>2.11.4</jackson-version>
+        <embed-tomcat-version>9.0.41</embed-tomcat-version>
     </properties>
 
     <dependencyManagement>
@@ -44,11 +45,6 @@
                 <version>${lombok-version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>${servlet-version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson-version}</version>
@@ -62,6 +58,16 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-annotations</artifactId>
                 <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-core</artifactId>
+                <version>${embed-tomcat-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-jasper</artifactId>
+                <version>${embed-tomcat-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
